@@ -1,0 +1,16 @@
+#! /usr/bin/env bash
+
+### 8 Layers, Dilated Convolution  -> Doesn't Run ! 
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py --num_epochs 80 --batch_size 100 --seed 0 --num_filters 4 --num_layers 8 --dim_reduction_type dilated_convolution  --use_gpu True --experiment_name f4_l8_dilated
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py --num_epochs 80 --batch_size 100 --seed 0 --num_filters 8 --num_layers 8 --dim_reduction_type dilated_convolution  --use_gpu True  --experiment_name f8_l8_dilated
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py  --num_epochs 80 --batch_size 100 --seed 0 --num_filters 16 --num_layers 8 --dim_reduction_type dilated_convolution  --use_gpu True  --experiment_name f16_l8_dilated
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py  --num_epochs 80 --batch_size 100 --seed 0 --num_filters 32 --num_layers 8 --dim_reduction_type dilated_convolution  --use_gpu True  --experiment_name f32_l8_dilated
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py  --num_epochs 80 --batch_size 100 --seed 0 --num_filters 50 --num_layers 8 --dim_reduction_type dilated_convolution  --use_gpu True  --experiment_name f50_l8_dilated
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py --num_epochs 80 --batch_size 100 --seed 0 --num_filters 100 --num_layers 8 --dim_reduction_type dilated_convolution  --use_gpu True   --experiment_name f100_l8_dilated
+

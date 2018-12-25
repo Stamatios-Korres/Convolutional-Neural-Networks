@@ -1,0 +1,34 @@
+#! /usr/bin/env bash
+
+### 5layers, Max Pooling
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py --num_epochs 80 --batch_size 100 --seed 0 --num_filters 16 --num_layers 3 --dim_reduction_type max_pooling  --use_gpu True  --experiment_name f16_l3_max
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py --num_epochs 80 --batch_size 100 --seed 0 --num_filters 32 --num_layers 3 --dim_reduction_type max_pooling  --use_gpu True  --experiment_name f32_l3_max
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py --num_epochs 80  --batch_size 100 --seed 0 --num_filters 50 --num_layers 3 --dim_reduction_type max_pooling  --use_gpu True  --experiment_name f50_l3_max
+
+### 3 Layers, Strided Convolution 
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py  --num_epochs 80--batch_size 100 --seed 0 --num_filters 16 --num_layers 3 --dim_reduction_type strided_convolution  --use_gpu True   --experiment_name f16_l3_strided
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py  --num_epochs 80 --batch_size 100 --seed 0 --num_filters 32 --num_layers 3 --dim_reduction_type strided_convolution  --use_gpu True    --experiment_name f32_l3_strided
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py  --num_epochs 80 --batch_size 100 --seed 0 --num_filters 50 --num_layers 3 --dim_reduction_type strided_convolution  --use_gpu True  --experiment_name f50_l3_strided
+
+### 3 Layers, Avg_Pooling 
+
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py --num_epochs 80 --batch_size 100 --seed 0 --num_filters 16 --num_layers 3 --dim_reduction_type avg_pooling  --use_gpu True  --experiment_name f16_l3_avg
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py --num_epochs 80 --batch_size 100 --seed 0 --num_filters 32 --num_layers 3 --dim_reduction_type avg_pooling  --use_gpu True  --experiment_name f32_l3_avg
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py --num_epochs 80 --batch_size 100 --seed 0 --num_filters 50 --num_layers 3 --dim_reduction_type avg_pooling  --use_gpu True  --experiment_name f50_l3_avg
+
+### 3 Layers, Dilated Convolution 
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py  --num_epochs 80--batch_size 100 --seed 0 --num_filters 16 --num_layers 3 --dim_reduction_type dilated_convolution  --use_gpu True  --experiment_name f16_l3_dilated
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py  --num_epochs 80 --batch_size 100 --seed 0 --num_filters 32 --num_layers 3 --dim_reduction_type dilated_convolution  --use_gpu True   --experiment_name f32_l3_dilated
+
+python mlp/pytorch_experiment_scripts/train_evaluate_emnist_classification_system.py  --num_epochs 80 --batch_size 100 --seed 0 --num_filters 50 --num_layers 3 --dim_reduction_type dilated_convolution  --use_gpu True  --experiment_name f50_l3_dilated
