@@ -8,6 +8,7 @@ set-ups and configurations affect a CNN's performance. We experimented on the ef
 
 * Python 3.7
 * Matplotlib
+* Numpy
 * Pytorch
 * Spicy
 
